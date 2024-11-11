@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3><%= @questionUser%></h3>
+  <p><i>-You</i></p>
+  <% if @questionUser.downcase == "i am going to work right now!" %>
+    <h3>Great, have a productive day!</h3>
+    <p><i>-Your coach</i></p>
+
+  <% elsif @questionUser.include?("!") %>
+    <h3>I don't care, get dressed and go to work!</h3>
+    <p><i>-Your coach</i></p>
+
+  <% elsif @questionUser.include?("?") %>
+    <h3>Silly question, get dressed and go to work!</h3>
+    <p><i>-Your coach</i></p>
+
+  <% else %>
+    <h3>Just go to work!</h3>
+    <p><i>-Your coach</i></p>
+  <% end %>
+</body>
+</html>
